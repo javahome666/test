@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>宋赟个藤球</title>
+	<script type="text/javascript">
+// 		function myFunction() {
+//    			 return false;
+// 		}
+		window.onload=function(){
+			// 强制修改历史纪录，无法返回
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function () {
+			    history.pushState(null, null, document.URL);
+			})
+		
+			// 定义全局标量 i 用来判断输出语句
+			i = 5;
+			var is = document.getElementsByClassName('is') [0];
+			is.addEventListener('click', aa, false);
+			var not = document.getElementsByClassName("not") [0];
+			not.addEventListener('click', bb, false);
+		}
+
+		function aa(){
+			alert("哎哟 好羞涩啊 不要迷恋哥");
+			window.close();
+		}
+		function bb(){
+			var up = document.getElementsByClassName('up')[0];
+			var p = document.createElement('p');
+			if(i%5==0){
+				 up.append(p);
+				 p.innerHTML = "什么?"
+			}else if(i%5==1){
+				up.append(p);
+				p.innerHTML = "我是陈冠希！"
+			}else if(i%5==2){
+				up.append(p);
+				p.innerHTML = "我比吴彦祖都帅我是爆炸乱帅"
+			}else if(i%5==3){
+				up.append(p);
+				p.innerHTML = "说我不帅我生气了我要移除这该死的按钮?"
+			}else if(i%5==4){
+				up.append(p);
+				p.innerHTML = "我是世界上最帅的男人"
+				document.getElementsByClassName('not')[0].style.display = 'none';
+			}
+			i++;
+		}
+	</script>
+	<style type="text/css">
+		
+		body{
+			text-align : center;
+		}
+		p{
+			font-size:2em;
+			color:green;
+		}
+
+		.head{
+			color: lightblue;
+			font-size: 4em;
+			font-family: "楷体";
+		}
+		.up{
+/* 			border: 5px solid #CCC; */
+			
+		}
+		/*.ccw{
+			width: 10em;
+			height: 6em;
+			color: red;
+			float: left;
+			margin-top: 15em;
+			margin-left: 15em;
+			
+		}*/
+
+		button{
+			width:10em;
+			height:6em;
+		}
+	</style>
+</head>
+
+<body>
+<div class="qq">
+	<!-- <img src="1533371271919.JPEG"> <span class="ccw"><这是猪</span> -->
+	<!-- 上层-->
+	<div class="up">
+		<p class="head">   涛哥帅么？ </p>
+		<!-- 上层结束 -->
+	</div>
+	<!-- 下层 -->
+	<div class="down">
+		<button class="is">帅</button>&nbsp;<button class="not">不帅</button>
+		<!-- 下层结束 -->
+		</div>
+</div>
+</body>
+</html>  
